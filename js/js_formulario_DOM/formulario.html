@@ -1,0 +1,60 @@
+
+
+<!-- 1.-Debes tener un formulario con los campos nombre apellidos y edad
+2.-Enviar datos con submit
+3.- Mostrar todo en pantalla
+4.- tener un boton que al darle click que nos muestra los datos del formulario 
+5.- validación del formulario
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio DOM</title>
+    <script type="text/javascript" src="form.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 250px;
+            float: left;
+            margin: 20px;
+        }
+
+        .dashed{
+            border: 3px dashed black;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ejercicio DOM</h1>
+
+    <!-- le colocamos onsubmit return false para que no se vuelva a recargar la pagina
+    un vez que se presiona el submit, basicamente no me reedirige a otra página -->
+
+    <div class="box">
+
+ 
+    <form action="" method="POST" id="formulario" onsubmit="return false;">
+        <label for="nombre"> Nombre</label> </br>
+        <input type="text" name="nombre" id="nombre"> </br>
+        <span id="error_nombre"></span>
+        
+        <label for="apellidos"> Apellido</label> </br>
+        <input type="text" name="apellidos" id="apellidos"> </br>
+
+        <label for="edad"> edad</label> </br>
+        <input type="number" name="age" id="age"> </br>
+
+        <input type="submit" value="enviar" id="submit">
+    </div>
+
+    <div class="box dashed">
+        <h3>Información del usuario</h3>
+        </hr>
+    </div>
+</body>
+</html>
